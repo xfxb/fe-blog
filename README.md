@@ -24,14 +24,23 @@
 title: test demo # 文章标题， 默认是文件名字，你可以改变
 date: 2018-05-14 14:12:15 # 文章生成日期，就用默认的
 author: 杨永鹏 # 作者姓名
-categories: # 分类
-- it # 标签
+email: # 你邮箱
+categories: # 分类 不填
+- js # 标签 必填
 tags:
-- test
-- demo
+- es5
+- Decorator
 ---
 # 开始文章正文
 ```
+
+如果一篇文章短时间写不完，可以先以草稿的信息先保存，不发表，等完成后，才发表。
+
+生成草稿：`hexo new draft <file name>`
+
+发表草稿： `hexo publish <draft file name>`
+
+本地服务预览草稿文件：`hexo server --draft`
 
 ### 把文章部署到服务器
 
@@ -54,6 +63,34 @@ tags:
 
 ## 技术池
 
+- js
+
+- css
+
+- html
+
+- canvas
+
+- svg
+
+- webpack
+
+- react
+
+- vue
+
+- nodejs
+
+- weixin-app
+
+- performance-optimization
+
+- algorithm
+
+- shell
+
+
+
 ## 参考
 
 [hexo官网][2]
@@ -61,4 +98,4 @@ tags:
 
 [1]:https://xfxb.github.io/fe-blog/ "博客GitHub访问地址"
 [2]:https://hexo.io/ "hexo官网"
-[3]:https://www.staticgen.com/ ""
+[3]:https://www.staticgen.com/ "A List of Static Site Generators for JAMstack Sites"
