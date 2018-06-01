@@ -37,6 +37,8 @@ author: smileBin-web
 
 > 截止2018/5/30 17:47 可支持小程序插件的用户占比为 58.95% 这个比例会一直上升 希望我们发布上线的时候能够达到一个能接受的占比。
 
+> 截止2018/6/1 16：41 可支持小程序插件的用户占比已达98.23%
+
 ## 3、小程序插件的接入（包括开发和使用）请参考 [插件接入指南](https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D)
 
 
