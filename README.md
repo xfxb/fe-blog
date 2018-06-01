@@ -12,6 +12,7 @@
 1. 安装 hexo-cli：`npm install -g hexo-cli`
 2. 安装依赖包：`npm install`
 3. 启动本地服务，在本地预览：`hexo server`
+4. 安装主题：`git clone https://github.com/iissnan/hexo-theme-next themes/next`
 
 ### 写文章
 
