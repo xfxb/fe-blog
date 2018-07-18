@@ -108,20 +108,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="幸福西饼前端技术博客">
-<meta property="og:url" content="https://xfxb.github.io/index.html">
+  <meta name="description" content="Mock 优先级说明请求 Mock 数据时，规则匹配优先级：Mock 期望 &amp;gt; 自定义 Mock 脚本 &amp;gt; 普通 Mock。 如果前面匹配到 Mock 数据，后面 Mock 则不返回。 Mock 望期 “期望”意思是，当你输请求参数是这个的时候，我给你返回一个特殊的数据。例如，手机号11234567890是管理员账号，管理员返回数据要和普通成员不一样，这时候我们就可以使用期望来处理。">
+<meta name="keywords" content="yapi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yapi 高级Mock功能资料整理">
+<meta property="og:url" content="https://xfxb.github.io/2018/07/18/yapi-advanced-mock/index.html">
 <meta property="og:site_name" content="幸福西饼前端技术博客">
+<meta property="og:description" content="Mock 优先级说明请求 Mock 数据时，规则匹配优先级：Mock 期望 &amp;gt; 自定义 Mock 脚本 &amp;gt; 普通 Mock。 如果前面匹配到 Mock 数据，后面 Mock 则不返回。 Mock 望期 “期望”意思是，当你输请求参数是这个的时候，我给你返回一个特殊的数据。例如，手机号11234567890是管理员账号，管理员返回数据要和普通成员不一样，这时候我们就可以使用期望来处理。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-18T10:11:17.194Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="幸福西饼前端技术博客">
+<meta name="twitter:title" content="yapi 高级Mock功能资料整理">
+<meta name="twitter:description" content="Mock 优先级说明请求 Mock 数据时，规则匹配优先级：Mock 期望 &amp;gt; 自定义 Mock 脚本 &amp;gt; 普通 Mock。 如果前面匹配到 Mock 数据，后面 Mock 则不返回。 Mock 望期 “期望”意思是，当你输请求参数是这个的时候，我给你返回一个特殊的数据。例如，手机号11234567890是管理员账号，管理员返回数据要和普通成员不一样，这时候我们就可以使用期望来处理。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://xfxb.github.io/"/>
+  <link rel="canonical" href="https://xfxb.github.io/2018/07/18/yapi-advanced-mock/"/>
 
 
 
@@ -131,7 +136,7 @@
   };
 </script>
 
-  <title>幸福西饼前端技术博客</title>
+  <title>yapi 高级Mock功能资料整理 | 幸福西饼前端技术博客</title>
   
 
 
@@ -178,8 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -260,9 +264,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -294,11 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/fe-blog/2018/07/18/yapi-advanced-mock/" itemprop="url">
-                  yapi 高级Mock功能资料整理
-                </a>
+          <h1 class="post-title" itemprop="name headline">yapi 高级Mock功能资料整理
               
             
           </h1>
@@ -361,9 +361,7 @@
       
 
       
-        
-          
-            <h1 id="Mock-优先级说明"><a href="#Mock-优先级说明" class="headerlink" title="Mock 优先级说明"></a>Mock 优先级说明</h1><p>请求 Mock 数据时，规则匹配优先级：<code>Mock 期望 &gt; 自定义 Mock 脚本 &gt; 普通 Mock</code>。</p>
+        <h1 id="Mock-优先级说明"><a href="#Mock-优先级说明" class="headerlink" title="Mock 优先级说明"></a>Mock 优先级说明</h1><p>请求 Mock 数据时，规则匹配优先级：<code>Mock 期望 &gt; 自定义 Mock 脚本 &gt; 普通 Mock</code>。</p>
 <p>如果前面匹配到 Mock 数据，后面 Mock 则不返回。</p>
 <h1 id="Mock-望期"><a href="#Mock-望期" class="headerlink" title="Mock 望期"></a>Mock 望期</h1><blockquote>
 <p>“期望”意思是，当你输请求参数是这个的时候，我给你返回一个特殊的数据。例如，手机号11234567890是管理员账号，管理员返回数据要和普通成员不一样，这时候我们就可以使用期望来处理。</p>
@@ -399,8 +397,6 @@
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://yapi.ymfe.org/documents/adv_mock.html#mock-%E6%9C%9F%E6%9C%9B" target="_blank" rel="noopener">高级Mock</a></p>
 <p><a href="https://www.zhangxinxu.com/wordpress/2018/05/introduce-yapi-api/" target="_blank" rel="noopener">在同事的安利下，试用了下接口管理平台YApi</a></p>
 
-          
-        
       
     </div>
 
@@ -418,446 +414,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xfxb.github.io/fe-blog/2018/07/17/yapi-mock/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="杨永鹏">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/fe-blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="幸福西饼前端技术博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/fe-blog/2018/07/17/yapi-mock/" itemprop="url">
-                  yapi 关于mock功能的资料整理
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-17 11:30:21 / Modified: 15:52:33" itemprop="dateCreated datePublished" datetime="2018-07-17T11:30:21+08:00">2018-07-17</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/fe-blog/tags/yapi/" rel="tag"># yapi</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="mock功能的两种方式"><a href="#mock功能的两种方式" class="headerlink" title="mock功能的两种方式"></a>mock功能的两种方式</h1><h2 id="方式一：利用-jsopn5-Mock-js"><a href="#方式一：利用-jsopn5-Mock-js" class="headerlink" title="方式一：利用 jsopn5 + Mock.js"></a>方式一：利用 jsopn5 + Mock.js</h2><blockquote>
-<p>原理：基于 Mockjs，跟 Mockjs 区别是 yapi 基于 json5 + 注释 定义 mock 数据，无法使用 Mock.js 原有的函数功能。</p>
-</blockquote>
-<h3 id="JSON5"><a href="#JSON5" class="headerlink" title="JSON5"></a>JSON5</h3><p>作用：是对 JSON 的一种推荐扩展，旨在使人类更易于手动编写和维护</p>
-<p>JSON5 与 JSON 格式的区别</p>
-<ul>
-<li>key 只要是有效的标识符，则可以不加引号。即使是 ES5 中的保留关键字</li>
-<li>key-value 都可以使用单引号</li>
-<li>对象和数组尾巴都可跟着逗号</li>
-<li>字符串可以是多行的，只要加上反斜杠</li>
-<li>数字可以是十六进制（基数为16）／以小数点开头或结尾／包括Infinity，-Infinity，NaN和-NaN／以明确的加号开始。</li>
-<li><strong>允许使用注释，单行多行都可以</strong></li>
-</ul>
-<h3 id="Mock-js"><a href="#Mock-js" class="headerlink" title="Mock.js"></a>Mock.js</h3><p>作用：生成随机数据，拦截 Ajax 请求</p>
-<h4 id="Mock-js-的语法规范包括两部分："><a href="#Mock-js-的语法规范包括两部分：" class="headerlink" title="Mock.js 的语法规范包括两部分："></a>Mock.js 的语法规范包括两部分：</h4><ol>
-<li><p>数据模板定义 <a href="https://github.com/nuysoft/Mock/wiki/Syntax-Specification#%E6%95%B0%E6%8D%AE%E6%A8%A1%E6%9D%BF%E5%AE%9A%E4%B9%89%E8%A7%84%E8%8C%83-dtd" target="_blank" rel="noopener">【使用文档】</a> <a href="http://mockjs.com/examples.html" target="_blank" rel="noopener">【全部示例】</a></p>
-<p> 数据模板中的每个属性由 3 部分构成：属性名、生成规则、属性值</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'name|rule'</span>: value</span><br><span class="line"></span><br><span class="line"><span class="comment">// 属性名   name</span></span><br><span class="line"><span class="comment">// 生成规则 rule</span></span><br><span class="line"><span class="comment">// 属性值   value</span></span><br></pre></td></tr></table></figure>
-<p> yapi官方例子：</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"name|regexp"</span>: <span class="string">"[a-z0-9_]+?"</span>,</span><br><span class="line">    <span class="string">"type|regexp"</span>: <span class="string">"json|text|xml"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>数据占位符定义  <a href="https://github.com/nuysoft/Mock/wiki/Syntax-Specification#%E6%95%B0%E6%8D%AE%E5%8D%A0%E4%BD%8D%E7%AC%A6%E5%AE%9A%E4%B9%89%E8%A7%84%E8%8C%83-dpd" target="_blank" rel="noopener">【使用文档】</a>  <a href="http://mockjs.com/examples.html#DPD" target="_blank" rel="noopener">【全部示例】</a></p>
-<p> 占位符 只是在属性值字符串中占个位置，并不出现在最终的属性值中。</p>
-<p> 占位符 的格式为：</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@占位符</span><br><span class="line">@占位符(参数 [, 参数])</span><br></pre></td></tr></table></figure>
-<p> yapi官方例子：</p>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"errcode"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="string">"errmsg"</span>: <span class="string">"@word"</span>,</span><br><span class="line">    <span class="string">"data"</span>: &#123;</span><br><span class="line">    <span class="string">"id"</span>: <span class="string">"@id"</span>, <span class="comment">//@id 随机生成 id</span></span><br><span class="line">        <span class="string">"name"</span>: <span class="string">"@name"</span> <span class="comment">//@name 随机生成用户名</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="支持替换请求的-query-body-参数"><a href="#支持替换请求的-query-body-参数" class="headerlink" title="支持替换请求的 query, body 参数"></a>支持替换请求的 query, body 参数</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"$&#123;query.name&#125;"</span>, <span class="comment">//请求的url是/path?name=xiaoming, 返回的name字段是xiaoming</span></span><br><span class="line">  <span class="string">"type"</span>: <span class="string">"$&#123;body.type&#125;"</span>,   <span class="comment">//请求的requestBody type=1,返回的type字段是1</span></span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="方式二-json-schema"><a href="#方式二-json-schema" class="headerlink" title="方式二. json-schema"></a>方式二. json-schema</h2><p>JSON Schema是基于JSON格式，用于定义JSON数据结构以及校验JSON数据内容。</p>
-<blockquote>
-<p>开启 json-schema 功能后，将不再使用 Mock.js 解析定义的返回数据，而是根据 json-schema 定义的数据结构，生成随机数据。</p>
-</blockquote>
-<p>json-schema 参数比较多建议使用可视化工具入门<br><a href="http://yapi.demo.qunar.com/editor/" target="_blank" rel="noopener">【 json-schema-editor-visual 在线转换编辑器 】</a></p>
-<h3 id="常见-json-schema-关键字"><a href="#常见-json-schema-关键字" class="headerlink" title="常见 json-schema 关键字"></a>常见 json-schema 关键字</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">关键字</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">$schema</td>
-<td style="text-align:left">表示该JSON Schema文件遵循的规范</td>
-</tr>
-<tr>
-<td style="text-align:left">title</td>
-<td style="text-align:left">为该JSON Schema文件提供一个标题</td>
-</tr>
-<tr>
-<td style="text-align:left">description</td>
-<td style="text-align:left">关于该JSON Schema文件的描述信息</td>
-</tr>
-<tr>
-<td style="text-align:left">type</td>
-<td style="text-align:left">表示待校验元素的类型（例如，最外层的type表示待校验的是一个JSON对象，内层type分别表示待校验的元素类型为，整数，字符串，数字）</td>
-</tr>
-<tr>
-<td style="text-align:left">properties</td>
-<td style="text-align:left">定义待校验的JSON对象中，各个key-value对中value的限制条件</td>
-</tr>
-<tr>
-<td style="text-align:left">required</td>
-<td style="text-align:left">定义待校验的JSON对象中，必须存在的key</td>
-</tr>
-<tr>
-<td style="text-align:left">minimum</td>
-<td style="text-align:left">用于约束取值范围，表示取值范围应该大于或等于minimum</td>
-</tr>
-<tr>
-<td style="text-align:left">exclusiveMinimum</td>
-<td style="text-align:left">如果minimum和exclusiveMinimum同时存在，且exclusiveMinimum的值为true，则表示取值范围只能大于minimum</td>
-</tr>
-<tr>
-<td style="text-align:left">maximum</td>
-<td style="text-align:left">用于约束取值范围，表示取值范围应该小于或等于maximum</td>
-</tr>
-<tr>
-<td style="text-align:left">exclusiveMaximum</td>
-<td style="text-align:left">如果maximum和exclusiveMaximum同时存在，且exclusiveMaximum的值为true，则表示取值范围只能小于maximum</td>
-</tr>
-<tr>
-<td style="text-align:left">multipleOf</td>
-<td style="text-align:left">用于约束取值，表示取值必须能够被multipleOf所指定的值整除</td>
-</tr>
-<tr>
-<td style="text-align:left">maxLength</td>
-<td style="text-align:left">字符串类型数据的最大长度</td>
-</tr>
-<tr>
-<td style="text-align:left">minLength</td>
-<td style="text-align:left">字符串类型数据的最小长度</td>
-</tr>
-<tr>
-<td style="text-align:left">pattern</td>
-<td style="text-align:left">使用正则表达式约束字符串类型数据</td>
-</tr>
-</tbody>
-</table>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://yapi.ymfe.org/documents/mock.html" target="_blank" rel="noopener">yapi Mock介绍</a></p>
-<p><a href="https://wxnacy.com/2018/02/18/json5/" target="_blank" rel="noopener">JSON5 更舒服的 JSON 格式</a> </p>
-<p><a href="https://github.com/nuysoft/Mock/wiki" target="_blank" rel="noopener">Mock.js</a> </p>
-<p><a href="https://blog.csdn.net/qiumengchen12/article/details/72650291" target="_blank" rel="noopener">JSON开发笔记（二）—— JSON Schema实战（上）</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xfxb.github.io/fe-blog/2018/06/01/xiaochengxuplugin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="杨永鹏">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/fe-blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="幸福西饼前端技术博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/fe-blog/2018/06/01/xiaochengxuplugin/" itemprop="url">
-                  小程序插件分析报告
-                </a>
-              
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/fe-blog/2018/07/17/yapi-mock/" rel="next" title="yapi 关于mock功能的资料整理">
+                <i class="fa fa-chevron-left"></i> yapi 关于mock功能的资料整理
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-06-01 14:49:35" itemprop="dateCreated datePublished" datetime="2018-06-01T14:49:35+08:00">2018-06-01</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-17 11:29:10" itemprop="dateModified" datetime="2018-07-17T11:29:10+08:00">2018-07-17</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="小程序插件学习报告"><a href="#小程序插件学习报告" class="headerlink" title="小程序插件学习报告"></a>小程序插件学习报告</h1><h2 id="1、小程序插件的介绍-插件介绍"><a href="#1、小程序插件的介绍-插件介绍" class="headerlink" title="1、小程序插件的介绍 插件介绍"></a>1、小程序插件的介绍 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/" target="_blank" rel="noopener">插件介绍</a></h2><blockquote>
-<p>插件是对一组 js 接口或<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/" target="_blank" rel="noopener">自定义组件</a>的封装，用于提供给第三方小程序调用。插件必须嵌入在其他小程序中才能被用户使用。<br>插件开发者可以像开发小程序一样编写一个插件并上传代码，在插件发布之后，其他小程序方可调用。小程序平台会托管插件代码，其他小程序调用时，上传的插件代码会随小程序一起下载运行。<br>相对于普通 js 文件或自定义组件，插件拥有更强的独立性，拥有独立的 API 接口、域名列表等，但同时会受到一些限制，如一些 API 无法调用或功能受限。API的限制请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/api-limit.html" target="_blank" rel="noopener">可用的API</a></p>
-</blockquote>
-<h4 id="Tip"><a href="#Tip" class="headerlink" title="Tip:"></a>Tip:</h4><blockquote>
-<p>开发一个插件和开发小程序一样需要上传，审核，发布上线经历一个较为繁琐的周期，因此对于一些较为简单的功能js模块或是自定义组件不适合应用插件，并且插件会随小程序一起下载并没有缩减资源包的大小。</p>
-</blockquote>
-<blockquote>
-<p>基于一个小程序的appId 只能开发一个小程序插件, 他要有自己独立的API接口 能够提供服务 不能作为demo提交审核和发布（比小程序的审核更加严格）。</p>
-</blockquote>
-<blockquote>
-<p>使用他人的插件时 目前还查阅不到插件的使用文档 个人推测这个为插件市场铺路 往后可能要付费使用</p>
-</blockquote>
-<h4 id="插件可以是"><a href="#插件可以是" class="headerlink" title="插件可以是:"></a>插件可以是:</h4><blockquote>
-<p>提供查询快递信息的服务</p>
-</blockquote>
-<blockquote>
-<p> 提供查询天气的服务</p>
-</blockquote>
-<blockquote>
-<p> 提供打车（滴滴）的服务 - 可以使用滴滴提供的组件，直接嵌入自己的小程序，实现打车功能）</p>
-</blockquote>
-<blockquote>
-<p>提供外卖（美团外卖）的服务 - 例如每个餐厅需要的小程序风格都不一样，但他都需要外卖功能，那这时就可以给餐厅都定制一个小程序，在外卖部分的功能可以直接使用美团外卖提供的外卖插件</p>
-</blockquote>
-<blockquote>
-<p> 提供征信服务 - 例如p2p小程序大部分要使用征信，如果有人提供一个征信服务的插件，那直接拿来使用，就减少了很大的开发量，没有插件之前，你要不然自己做，要不然你可以使用小程序webview功能打开征信网站（需要添加webview允许域名才行），但这样的体验远远没有小程序好和直接</p>
-</blockquote>
-<h2 id="2、小程序的兼容分析报告"><a href="#2、小程序的兼容分析报告" class="headerlink" title="2、小程序的兼容分析报告"></a>2、小程序的兼容分析报告</h2><blockquote>
-<p>插件的开发和使用自小程序基础库版本 1.9.6 开始支持 有关基础库的介绍请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/client-lib.html" target="_blank" rel="noopener">基础库</a></p>
-</blockquote>
-<blockquote>
-<p>截止2018/5/30 17:47 可支持小程序插件的用户占比为 58.95% 这个比例会一直上升 希望我们发布上线的时候能够达到一个能接受的占比。</p>
-</blockquote>
-<blockquote>
-<p>截止2018/6/1 16：41 可支持小程序插件的用户占比已达98.23%</p>
-</blockquote>
-<h2 id="3、小程序插件的接入（包括开发和使用）请参考-插件接入指南"><a href="#3、小程序插件的接入（包括开发和使用）请参考-插件接入指南" class="headerlink" title="3、小程序插件的接入（包括开发和使用）请参考 插件接入指南"></a>3、小程序插件的接入（包括开发和使用）请参考 <a href="https://developers.weixin.qq.com/miniprogram/introduction/plugin.html#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%8F%92%E4%BB%B6%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D" target="_blank" rel="noopener">插件接入指南</a></h2><h2 id="4、插件的开发-请参考-开发插件"><a href="#4、插件的开发-请参考-开发插件" class="headerlink" title="4、插件的开发 请参考 开发插件"></a>4、插件的开发 请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html" target="_blank" rel="noopener">开发插件</a></h2><h2 id="5、插件的使用-请参考-使用插件"><a href="#5、插件的使用-请参考-使用插件" class="headerlink" title="5、插件的使用 请参考 使用插件"></a>5、插件的使用 请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html" target="_blank" rel="noopener">使用插件</a></h2>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -867,166 +453,19 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xfxb.github.io/fe-blog/2018/05/17/hellow-wrold/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="杨永鹏">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/fe-blog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="幸福西饼前端技术博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/fe-blog/2018/05/17/hellow-wrold/" itemprop="url">
-                  hello world
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-05-17 11:40:03" itemprop="dateCreated datePublished" datetime="2018-05-17T11:40:03+08:00">2018-05-17</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-06-08 10:44:11" itemprop="dateModified" datetime="2018-06-08T10:44:11+08:00">2018-06-08</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>hello world</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1047,8 +486,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1110,6 +558,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mock-优先级说明"><span class="nav-number">1.</span> <span class="nav-text">Mock 优先级说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mock-望期"><span class="nav-number">2.</span> <span class="nav-text">Mock 望期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#期望例子："><span class="nav-number">2.1.</span> <span class="nav-text">期望例子：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mock-脚本"><span class="nav-number">3.</span> <span class="nav-text">Mock 脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局变量"><span class="nav-number">3.1.</span> <span class="nav-text">全局变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#脚本例子："><span class="nav-number">3.2.</span> <span class="nav-text">脚本例子：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#脚本"><span class="nav-number">3.2.1.</span> <span class="nav-text">脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回结果"><span class="nav-number">3.2.2.</span> <span class="nav-text">返回结果</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1237,6 +701,10 @@
   
 
   
+  <script type="text/javascript" src="/fe-blog/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/fe-blog/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
