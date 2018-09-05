@@ -277,6 +277,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xfxb.github.io/fe-blog/2018/09/05/ESlint-Prettier/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="杨永鹏">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/fe-blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="幸福西饼前端技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/fe-blog/2018/09/05/ESlint-Prettier/" itemprop="url">
+                  使用ESlint和Prettier配置React项目
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-09-05 11:56:00 / Modified: 14:53:43" itemprop="dateCreated datePublished" datetime="2018-09-05T11:56:00+08:00">2018-09-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="使用-ESlint-和-Prettier-配置-React-项目"><a href="#使用-ESlint-和-Prettier-配置-React-项目" class="headerlink" title="使用 ESlint 和 Prettier 配置 React 项目"></a>使用 ESlint 和 Prettier 配置 React 项目</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><h3 id="Q-ESlint-不是自带格式化吗？为什么还要用-Prettier。"><a href="#Q-ESlint-不是自带格式化吗？为什么还要用-Prettier。" class="headerlink" title="Q: ESlint 不是自带格式化吗？为什么还要用 Prettier。"></a>Q: ESlint 不是自带格式化吗？为什么还要用 Prettier。</h3><pre><code>A: ESlint的重心在代码质量，Prettier只关心代码格式。
+</code></pre><h3 id="Q-Editorconfig-又起了什么作用？"><a href="#Q-Editorconfig-又起了什么作用？" class="headerlink" title="Q: Editorconfig 又起了什么作用？"></a>Q: Editorconfig 又起了什么作用？</h3><pre><code>A: EditorConfig可以帮助开发者在不同的编辑器和IDE之间定义和维护一致的代码风格。
+</code></pre><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="Prettier-一个简洁的代码格式化工具"><a href="#Prettier-一个简洁的代码格式化工具" class="headerlink" title="Prettier 一个简洁的代码格式化工具"></a><a href="https://github.com/prettier/prettier" target="_blank" rel="noopener">Prettier</a> 一个简洁的代码格式化工具</h3><h3 id="eslint-config-prettier-使用-eslint-兼容-Prettier-的规则"><a href="#eslint-config-prettier-使用-eslint-兼容-Prettier-的规则" class="headerlink" title="eslint-config-prettier 使用 eslint 兼容 Prettier 的规则"></a><a href="https://github.com/prettier/eslint-config-prettier" target="_blank" rel="noopener">eslint-config-prettier</a> 使用 eslint 兼容 Prettier 的规则</h3><h3 id="lint-staged-和-husky-git-的-hook-钩子工具"><a href="#lint-staged-和-husky-git-的-hook-钩子工具" class="headerlink" title="lint-staged 和 husky git 的 hook 钩子工具"></a><a href="https://github.com/okonet/lint-staged" target="_blank" rel="noopener">lint-staged</a> 和 <a href="https://github.com/typicode/husky" target="_blank" rel="noopener">husky</a> git 的 hook 钩子工具</h3><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="1-安装-eslint-相关"><a href="#1-安装-eslint-相关" class="headerlink" title="1. 安装 eslint 相关"></a>1. 安装 <code>eslint</code> 相关</h3><p>1.1 运行 <code>npm i -D eslint babel-eslint eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-react</code></p>
+<p>1.2  新建 <code>.eslintrc.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  parser: <span class="string">"babel-eslint"</span>,</span><br><span class="line">  extends: [<span class="string">"airbnb"</span>, <span class="string">"prettier"</span>]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装-prettier-相关"><a href="#2-安装-prettier-相关" class="headerlink" title="2. 安装 prettier 相关"></a>2. 安装 <code>prettier</code> 相关</h3><p>2.1 运行 <code>npm i -D prettier eslint-config-prettier</code></p>
+<p>2.2 新建 <code>.prettierrc</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"singleQuote"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">"trailingComma"</span>: <span class="string">"es5"</span>,</span><br><span class="line">  <span class="string">"printWidth"</span>: <span class="number">100</span>,</span><br><span class="line">  <span class="string">"overrides"</span>: [&#123;</span><br><span class="line">    <span class="string">"files"</span>: <span class="string">".prettierrc"</span>,</span><br><span class="line">    <span class="string">"options"</span>: &#123;</span><br><span class="line">      <span class="string">"parser"</span>: <span class="string">"json"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-配置-Pre-commit-Hook-git-提交前格式化和检查代码"><a href="#3-配置-Pre-commit-Hook-git-提交前格式化和检查代码" class="headerlink" title="3. 配置 Pre-commit Hook  git 提交前格式化和检查代码"></a>3. 配置 Pre-commit Hook  git 提交前格式化和检查代码</h3><p>3.1 运行 <code>npm i -D lint-staged husky</code></p>
+<h3 id="4-修改package-json"><a href="#4-修改package-json" class="headerlink" title="4. 修改package.json"></a>4. 修改<code>package.json</code></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"lint"</span>: <span class="string">"eslint --ext .js src"</span>,</span><br><span class="line">    <span class="string">"lint:fix"</span>: <span class="string">"eslint --fix --ext .js src"</span>,</span><br><span class="line">    <span class="string">"lint-staged"</span>: <span class="string">"lint-staged"</span>,</span><br><span class="line">    <span class="string">"lint-staged:js"</span>: <span class="string">"eslint --ext .js src"</span>,</span><br><span class="line">    <span class="string">"format"</span>: <span class="string">"prettier --write ./src/**/**/**/*.js"</span></span><br><span class="line">  &#125;,</span><br><span class="line">   <span class="string">"lint-staged"</span>: &#123;</span><br><span class="line">    <span class="string">"**/*.js"</span>: [</span><br><span class="line">      <span class="string">"prettier --write"</span>,</span><br><span class="line">      <span class="string">"git add"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"**/*.js"</span>: <span class="string">"npm run lint-staged:js"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://pro.ant.design" target="_blank" rel="noopener">ant-design-pro</a></p>
+<p><a href="http://www.infoq.com/cn/articles/using-prettier-format-javascript-code" target="_blank" rel="noopener">用 Prettier 格式化 JavaScript 代码</a></p>
+<p><a href="http://www.alloyteam.com/2014/12/editor-config" target="_blank" rel="noopener">EditorConfig 的介绍</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://xfxb.github.io/fe-blog/2018/07/18/yapi-advanced-mock/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1063,7 +1215,7 @@
                 
                   <a href="/fe-blog/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1084,7 +1236,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
