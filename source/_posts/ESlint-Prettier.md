@@ -85,6 +85,18 @@ module.exports = {
 }
 ```
 
+## 使用编辑器插件
+
+### vscode
+
+在用户设置中添加
+
+```js
+"prettier.eslintIntegration": true, // 使用'prettier-eslint' 代替 'prettier'
+"editor.formatOnSave": true, // 保存自动格式化
+"eslint.autoFixOnSave": true // 保存自动检查代码
+```
+
 ## 参考
 
 [ant-design-pro](https://pro.ant.design)
